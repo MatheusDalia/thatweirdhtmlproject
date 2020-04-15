@@ -8,9 +8,40 @@ body, html {
   box-sizing: border-box;
 }
 
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.the_fuck{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center
+}
+
+.white_txt{
+  font-family: monospace;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.black_txt{
+  font-family: monospace;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .bg-image {
   /* The image used */
-  background-image: url("https://img.discogs.com/6KausygjQhBG8kIDUMurgbZ4qy4=/fit-in/600x597/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1000276-1183517792.jpeg.jpg");
+  background-image: url("static/main.jpg");  
   
   /* Add the blur effect */
   filter: blur(11px);
@@ -25,22 +56,61 @@ body, html {
   background-size: cover;
 }
 
-/* Position text in the middle of the page/image */
-.bg-text {
-  color: white;
-  font-weight: bold;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 80%;
-  padding: 20px;
-  text-align: center;
+/* === === === MAIN SETTINGS === === === */
+main{
+  display: flex;
+  justify-content: center;
 }
-.the_roots_cover {
+
+.cards{
+  margin: 0;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: grid;
+  grid-gap: 50px 3rem;
+  max-width: 80%;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.box{
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: hsl(0, 0%, 100%);
+  margin: 5px;
+}
+
+.box:hover{
+  color: hsl(26, 100%, 50%);
+  cursor: pointer;
+}
+
+.img_container{
+  border: solid 15px hsl(0, 0%, 100%);
+
+}
+.img_box{
+  width: 320px;
+  height: 320px;
+
+  background-image: url("static/main.jpg");
+
   background-position: center;
-  width: 70%;
- 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
 }
