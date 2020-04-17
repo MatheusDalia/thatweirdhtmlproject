@@ -1,7 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, Roboto, sans-serif;
 }
 
 * {
@@ -26,9 +26,10 @@ header{
 }
 
 .white_txt{
-  font-family: monospace;
+  font-family: Helvetica;
   color: white;
-  font-weight: bold;
+  font-weight: lighter;
+  font-size: 30px;
   text-decoration: none;
 }
 
@@ -39,13 +40,38 @@ header{
   text-decoration: none;
 }
 
+
+.title-underline {
+    background-color: white;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 4px;
+    left: calc(50% - 37px);
+    position: absolute;
+    width: 74px;
+}
+
+.title-container {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 500;
+    padding-bottom: 25px;
+    margin-bottom: 45px;
+    position: relative;
+    text-align: center;
+}
+
 .bg-image {
   /* The image used */
   background-image: url("static/main.jpg");  
   
+
   /* Add the blur effect */
-  filter: blur(11px);
-  -webkit-filter: blur(11px);
+  filter: brightness(40%) 
+  sepia(40%)
+  hue-rotate(180deg)
+  blur(25px);
   
   /* Full height */
   height: 100%; 
@@ -55,6 +81,8 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
 
 
 /* === === === MAIN SETTINGS === === === */
@@ -95,10 +123,6 @@ main{
   cursor: pointer;
 }
 
-.img_container{
-  border: solid 15px hsl(0, 0%, 100%);
-
-}
 .img_box{
   width: 320px;
   height: 320px;
